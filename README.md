@@ -15,12 +15,12 @@
  2.定义相关变量   
  		String line = sc.nextLine();  
     String result = "";  
-    char[] chs = line.toCharArray();
-    int k=0;
+    char[] chs = line.toCharArray();  
+    int k=0;  
  3.异常处理，利用while函数对所输入的内容进行判断，若输入的字符不是7个汉字的整数倍，重新输入古诗，并再次进行判断：  
  		while(k<1) {  
 			if(chs.length%7==0) {  
-				k=1;  
+				k=1;   
 			}  
 			else {  
 				System.out.println("对不起，您输入的信息不符合格式");  
@@ -60,7 +60,7 @@
 		 System.out.println("本次程序结束");  
 三、实验运行结果截图：
 
-![e]（https://github.com/S8208819/-4/blob/master/31cb697ca954d62d08758d5011e1733.png）
+![e](https://github.com/S8208819/-4/blob/master/31cb697ca954d62d08758d5011e1733.png)
 
 四、总结
   本次的java实验整体上还是比较简单地，整节实验课让我了解到字符串的相关知识，让我获益匪浅，在程序中，我学习到了很多新的内容，同时也复习到了之前学习的很多内容，在对字符串中的字符进行查找时，先输入查找内容，再进行遍历，并输出遍历结果，这个内容让我复习到了之前学习的其他相关知识，在对整首古诗的进行分隔的操作，我利用循环进行判断，看他是否满足7个字符和2个字符分别进行判断来达到进行分隔的效果，总之，整个实验还是让我收获了许多内容。
