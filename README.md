@@ -8,56 +8,56 @@
 2.	允许提供输入参数，统计古诗中某个字或词出现的次数
 3.	考虑操作中可能出现的异常，在程序中设计异常处理程序
 调试过程：
-1.建立静态主函数，获取用户输入内容：
-	public static void main(String args[]) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("请输入古诗：");
- 2.定义相关变量
- 		String line = sc.nextLine();
-    String result = "";
+1.建立静态主函数，获取用户输入内容：  
+	public static void main(String args[]) {  
+		Scanner sc=new Scanner(System.in);  
+		System.out.println("请输入古诗：");  
+ 2.定义相关变量   
+ 		String line = sc.nextLine();  
+    String result = "";  
     char[] chs = line.toCharArray();
     int k=0;
- 3.异常处理，利用while函数对所输入的内容进行判断，若输入的字符不是7个汉字的整数倍，重新输入古诗，并再次进行判断：
- 		while(k<1) {
-			if(chs.length%7==0) {
-				k=1;
-			}
-			else {
-				System.out.println("对不起，您输入的信息不符合格式");
-				sc = new Scanner(System.in);
-				System.out.println("请重新输入古诗");
-				line = sc.nextLine();
-				result = "";
-				chs = line.toCharArray();
-				k=0;
-			}
-      			for (int x = 0; x<= chs.length - 1; x++) {
-				result += chs[x];
-			}
-4.利用循环进行判断，只满足7的倍数添加逗号，既满足7又满足2的倍数添加句号：
-		for (int i = 0; i<= chs.length - 1; i++) {
-			int j=(i+1)/7;
-			System.out.print(chs[i]);
-			if((i+1)%7==0) {
-				if(j % 2==1)
-					System.out.print("，");
-				if(j % 2==0)
-					System.out.println("。");
-			}
-		}
-5.获取用户输入查找的字符，并定义变量：
-		System.out.println("输入要查找的字符");
-		String in=sc.next();
-    int count=0;
-6.遍历字符串，并进行判定，输出：
-		for(int a=0;a<line.length();a++) {
-			char c=in.charAt(0);
-			if (c==chs[a]) {
+ 3.异常处理，利用while函数对所输入的内容进行判断，若输入的字符不是7个汉字的整数倍，重新输入古诗，并再次进行判断：  
+ 		while(k<1) {  
+			if(chs.length%7==0) {  
+				k=1;  
+			}  
+			else {  
+				System.out.println("对不起，您输入的信息不符合格式");  
+				sc = new Scanner(System.in);  
+				System.out.println("请重新输入古诗");  
+				line = sc.nextLine();  
+				result = "";  
+				chs = line.toCharArray();  
+				k=0;  
+			}  
+      			for (int x = 0; x<= chs.length - 1; x++) {  
+				result += chs[x];  
+			}  
+4.利用循环进行判断，只满足7的倍数添加逗号，既满足7又满足2的倍数添加句号：  
+		for (int i = 0; i<= chs.length - 1; i++) {  
+			int j=(i+1)/7;  
+			System.out.print(chs[i]);  
+			if((i+1)%7==0) {  
+				if(j % 2==1)  
+					System.out.print("，");  
+				if(j % 2==0)  
+					System.out.println("。");  
+			}  
+		}  
+5.获取用户输入查找的字符，并定义变量：  
+		System.out.println("输入要查找的字符");    
+		String in=sc.next();  
+    int count=0;  
+6.遍历字符串，并进行判定，输出：  
+		for(int a=0;a<line.length();a++) {  
+			char c=in.charAt(0);  
+			if (c==chs[a]) {  
 			    count++;
 			   }
 		}
-		 System.out.println("古诗中出现"+count+"次");
-		 System.out.println("本次程序结束");
+		 System.out.println("古诗中出现"+count+"次");  
+		 System.out.println("本次程序结束");  
 三、实验运行结果截图：
 
 ![e]（https://github.com/S8208819/-4/blob/master/31cb697ca954d62d08758d5011e1733.png）
